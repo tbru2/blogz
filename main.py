@@ -12,11 +12,19 @@ class Blog(db.Model):
     title = db.Column(db.String(120))
     body = db.Column(db.String(1000))
 
-    def __init__(self, title):
+    def __init__(self, title, body):
         self.title = title
+        self.body = body
 
-@app.route('/blog', methods=['GET'])
+@app.route('/blog')
 def index():
-    if request.method == 
+    return render_template('blog.html')
 
-@app.route('/newpost', methods=['POST'])
+#@app.route("/blog", methods=['POST'])
+
+@app.route('/newpost')
+def addpost():
+    return render_template('newpost.html')
+
+if __name__=="__main__":
+    app.run()

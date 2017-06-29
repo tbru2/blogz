@@ -3,12 +3,38 @@
 {% block content %}
     <h1>Add A Blog Post!!!</h1>
     <form action='/newpost' method = 'post'>
-        <label>
-            Title For Your New Blog:
-            <input type="text" name='title'/>
-        </label>
-        <label>
-            Your New Blog:
-            <input type="textarea" name='blog'/>
-        </label>
-            <input type='submit' value='Add entry'/>
+        <table>
+            <tr>
+                <td>
+                    <label>
+                        Title For Your New Blog:
+                       
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <input type="text" name='title'/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br><br>
+                    <label>
+                        Your New Blog:
+                    </label>
+                       
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type='text' name='blog'/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                     <input type='submit' value='Add entry'/>
+                </td>
+            <tr>
+        </table>
+{% endblock %}
