@@ -5,14 +5,15 @@
     <p>No blogs yet</p>
     {% else %}
 
-        <ul>
+        
             {% for x in blogs %}
-            <li>
-                <h1>{{blog.title}}</h1>
-                <p>{{blog.body}}</p>
-            </li>
+            
+                <h1><a href='/blog?id={{x.id}}'>{{x.title}}</a></h1>
+                
+                <p>{{x.body}}</p>
+                <p>______________________</p>
             {% endfor %}
-        </ul>
+        
     {% endif %}
 
 {% endblock %}

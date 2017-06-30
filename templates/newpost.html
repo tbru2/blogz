@@ -2,19 +2,23 @@
 
 {% block content %}
     <h1>Add A Blog Post!!!</h1>
-    <form action='/newpost' method = 'post'>
+    <form action='/newpost' method='post'>
         <table>
             <tr>
                 <td>
                     <label>
                         Title For Your New Blog:
-                       
                     </label>
+                </td>
+            </td>
+            <tr>
+                <td>
+                    <input type="text" name='title'/>
                 </td>
             </tr>
             <tr>
                 <td>
-                     <input type="text" name='title'/>
+                    <p class="error">{{title_error}}</p>
                 </td>
             </tr>
             <tr>
@@ -23,18 +27,22 @@
                     <label>
                         Your New Blog:
                     </label>
-                       
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type='text' name='blog'/>
+                   <textarea for="textbox" name="text" rows='4' cols='25'></textarea>
                 </td>
             </tr>
             <tr>
                 <td>
-                     <input type='submit' value='Add entry'/>
-                </td>
+                    <p class="error">{{text_error}}</p>
+            </tr>
             <tr>
+                <td>
+                    <br><br>
+                    <input type='submit' value='Add Entry'/>
+                </td>
+            </tr>
         </table>
-{% endblock %}
+    {% endblock %}
