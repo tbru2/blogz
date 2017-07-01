@@ -7,11 +7,26 @@
 
         
             {% for x in blogs %}
-            
-                <h1><a href='/blog?id={{x.id}}'>{{x.title}}</a></h1>
-                
-                <p>{{x.body}}</p>
-                <p>______________________</p>
+            <table>
+                <tr>
+                    <td>
+                        <h1><a href='/blog?id={{x.id}}'>{{x.title}}</a></h1>
+                    </td>
+                    <td>
+                        <span><strong>{{x.pub_date}}</strong></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>{{x.body}}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>______________________</p>
+                    </tr>
+                </tr>
+            </table>
             {% endfor %}
         
     {% endif %}
