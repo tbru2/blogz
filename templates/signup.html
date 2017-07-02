@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <h1>Register to Blogz</h1>  
+            <form action="/register" method ='POST'>
+                <table>
+                     <tr>
+                        <td>
+                            <label>Username</label>
+                        </td>
+                        <td>
+                            <input name="username" type="text" value = "{{username}}"/>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Password</label>
+                        </td>
+                        <td>
+                            <input name="password" type="password" />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Verify Password</label>
+                        </td>
+                        <td>
+                            <input name="verify" type="password">
+                        </td>
+                       
+                    </tr>
+                   
+                       <td> <input type="submit" value="Register"/> </td>
+                    </tr>
+                </table>
+            </form>
+    </body>
+</html>
+{% endblock %}

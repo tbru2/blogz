@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <h2>Log in to Blogz!</h2>  
+            <p>If you don't have an account, you may <a href="/register">register</a> for one.</p>
+            <form action="/login" method ='post'>
+                <table>
+                    <tr>
+                        <td>
+                            <label>username</label>
+                        </td>
+                        <td>
+                            <input name="username" type="text" value = "{{username}}"/>
+                        </td>
+                       
+                    </tr>
+                   
+                    <tr>
+                        <td>
+                            <label>Password</label>
+                        </td>
+                        <td>
+                            <input name="password" type="password" value="{{password}}"/>
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                       <td> <input type="submit" value="Login"/> </td>
+                    </tr>
+                </table>
+            </form>
+    </body>
+</html>
+{% endblock %}

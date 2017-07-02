@@ -1,12 +1,12 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 
 {% block content %}
-    {% if blogs|length == 0 %}
+    {% if user_blogs|length == 0 %}
     <p>No blogs yet</p>
     {% else %}
 
-           
-           {% for x in blogs %} 
+        
+            {% for x in user_blogs %}
             <table>
                 <tr>
                     <td>
@@ -20,13 +20,13 @@
                 </tr>
                 <tr>
                     <td>
-                       <p><i>written by <a href="/blog?user={{x.owner_id}}">{{x.owner.username}}</a></i></p>
+                        <p><i>written by <a href="/blog?user={{user_name.id}}">{{user_name.username}}</a></i></p>
                         <p>{{x.pub_date}}</p>
-                    </tr>
+                    </td>
                 </tr>
             </table>
             {% endfor %}
-            
+        
     {% endif %}
 
 {% endblock %}
